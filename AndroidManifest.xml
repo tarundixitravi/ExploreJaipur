@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.girnar.explorejaipur"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <permission
+        android:name="your_package_name.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="your_package_name.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+"
+        <activity
+            android:name="com.girnar.explorejaipur.activities.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:windowSoftInputMode="adjustPan" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.girnar.explorejaipur.activities.Homepage"
+            android:screenOrientation="portrait"
+            
+            android:windowSoftInputMode="stateAlwaysHidden|stateHidden|adjustPan|" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.BusDetails"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.CityMap"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.FindRoute"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.JaipurBus"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.MapView"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.MonumentCategory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.MonumentDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.Monuments"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.PathFromHere"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.PathFromJPJunction"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.Utilities"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.UtilityCategory"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.girnar.explorejaipur.activities.UtilityDetail"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCulwtAGEvTyc0f6AgMx19iQjU172EdKoc" />
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blk">#000000</color>
+    <color name="wht">#ffffff</color>
+<color name="maroon">#820402</color>
+    <color name="red">#BC0000</color>
+    <color name="pink">#E67B2D</color>
+    <color name="brown">#7D4822</color>
+     <color name="blue">#0E2EF1</color> 
+     <color name="jaipuria">#E76A38</color>
+      <color name="sblue">#A7E9F9</color>
+      <color name="darksblue">#07BBE8</color>
+      <color name="gray">#ECE6E6</color>
+<color name="darkgray">#A8A3A4</color>
+<color name="theme">#28D5E4</color>
+</resources>

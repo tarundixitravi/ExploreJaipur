@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/gray">
+
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+</LinearLayout>
+<ImageView android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@id/header"
+           android:layout_alignParentLeft="true" 
+           android:layout_marginLeft="5dp"
+           android:layout_marginTop="5dp"
+           android:id="@+id/logo_station"
+/>
+  <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+           android:textColor="@color/blk"
+            android:textStyle="bold"
+             android:layout_marginLeft="5dp"
+           android:layout_marginTop="5dp"
+        
+            android:id="@+id/distance_logo_define_text"
+              android:layout_toRightOf="@id/logo_station"
+             />
+
+
+   <RadioGroup
+        android:id="@+id/radiogroup_sorting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/button_namewise_category"
+            style="@style/navbar_button"
+            android:text="@string/name_wise" />
+
+    
+
+        <RadioButton
+            android:id="@+id/button_nearby_category"
+            style="@style/navbar_button"
+            android:text="@string/Near_By_Me" />
+    </RadioGroup>
+        
+        
+
+        <ListView 
+            android:layout_above="@id/footer"
+            android:layout_below="@id/radiogroup_sorting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_jaipur_bus_root"
+            android:divider="@drawable/button_background"
+            android:dividerHeight="2dp" >
+            </ListView>
+    
+</RelativeLayout>
+

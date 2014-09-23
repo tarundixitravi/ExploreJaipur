@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="ga_trackingId">UA-41921296-4</string>
+   <bool name="ga_autoActivityTracking">true</bool>
+   <bool name="ga_debug">false</bool>
+   <string name="com.testgoogleanalytics.MainActivity">MainActivity</string>
+   <string name="com.testgoogleanalytics.About">About</string>
+   <integer name="ga_dispatchPeriod">20</integer>
+ 
+</resources>

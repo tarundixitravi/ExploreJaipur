@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+    android:background="@drawable/gray">
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+</LinearLayout>
+
+  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical"
+          android:layout_margin="10dp"
+            android:background="@drawable/layout_back"
+             android:layout_above="@id/footer"
+          android:layout_below="@id/header"
+          >     
+
+        <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_margin="5dp"
+         
+          >
+         
+  <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+            
+            <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+             <TextView
+              android:id="@+id/text_rout_bus_details"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+            android:gravity="center"
+              android:text="@string/Route_no."
+              android:textColor="@color/theme"
+              android:textSize="20sp" />
+             
+             </TableRow>
+            <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/From: "
+                  android:textSize="16sp"
+                  android:textColor="@color/theme" />
+
+              <TextView
+                  android:id="@+id/text_from_bus_details"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:textColor="@color/wht" />
+          </TableRow>
+
+               <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/To:"
+                  android:textSize="16sp"
+                  android:textColor="@color/theme" />
+
+              <TextView
+                  android:id="@+id/text_to_bus_details"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:textColor="@color/wht" />
+          </TableRow>
+     <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:text="@string/Color: "
+                  android:textColor="@color/theme" />
+
+              <ImageView
+                  android:id="@+id/color_stations_bus_details"
+                  android:layout_width="20dp"
+                  android:layout_height="16dp"
+                  android:background="@color/blk"
+                  
+                 />
+          </TableRow>
+     <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:text="@string/Route_type: "
+                  
+                  android:textColor="@color/theme" />
+
+              <TextView
+                  android:id="@+id/text_type_bus_details"
+                  android:layout_width="wrap_content"
+                  android:textSize="16sp"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/wht" />
+          </TableRow>
+</TableLayout>
+          
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16sp"
+                  android:text="@string/Intermediate_Stations: "
+                  android:textColor="@color/theme" />
+         <ScrollView 
+    android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+         android:layout_marginTop="5dp"
+                         android:background="@drawable/gray"> 
+
+          <TextView
+              android:id="@+id/list_inte_station"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@color/blk"
+              android:textSize="16sp"
+              />
+
+          </ScrollView>
+              </LinearLayout>
+
+     
+  </LinearLayout>
+   
+</RelativeLayout>
+

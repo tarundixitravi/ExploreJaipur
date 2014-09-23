@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray">
+
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+           
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/footer"
+    android:layout_below="@id/header"
+    android:gravity="center"
+  
+    android:orientation="vertical"
+    >
+        <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"  
+         android:stretchColumns="*" >
+  <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:gravity="center_horizontal"> 
+  
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <ImageView android:id="@+id/button_hospital_utilities"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/monument_button"
+        android:src="@drawable/icon_hospital"
+    />
+    <TextView
+          
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Hospitals"
+          android:textColor="@color/blk"
+          android:gravity="center_horizontal"
+           />
+    </LinearLayout>
+      
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+ >
+    <ImageView android:id="@+id/button_hotel_utilities"
+ android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/monument_button"
+      android:src="@drawable/icon_hotel"
+      />
+    <TextView
+          
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Hotels"
+          android:textColor="@color/blk"
+          android:gravity="center_horizontal"
+           />
+    </LinearLayout>
+    </TableRow>
+     
+        <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:gravity="center_horizontal"
+         android:layout_marginTop="10dp">
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+   >
+  
+    <ImageView
+        android:id="@+id/button_police_utilities"
+ android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/monument_button"
+        android:src="@drawable/icon_police" />
+
+     <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/police_station"
+          android:gravity="center_horizontal"
+          android:textColor="@color/blk"
+          
+           />
+     </LinearLayout>
+
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+         <ImageView
+             android:id="@+id/button_rail_utilities"
+ android:layout_width="70dp"
+        android:layout_height="70dp"
+             android:background="@drawable/monument_button"
+             android:src="@drawable/icon_train" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:text="@string/Railway_Station"
+             android:textColor="@color/blk" 
+             android:gravity="center_horizontal"/>
+     </LinearLayout>
+</TableRow>
+   </TableLayout>
+</LinearLayout>
+</RelativeLayout>

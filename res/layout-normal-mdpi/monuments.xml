@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray">
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+
+</LinearLayout>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/footer"
+    android:layout_below="@id/header"
+    android:gravity="center"
+  
+    android:orientation="vertical"
+    >
+        <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="*"  
+         android:stretchColumns="*" >
+  <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:gravity="center_horizontal"> 
+  
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+    <ImageView android:id="@+id/button_historical_monuments"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+             android:gravity="center_horizontal"
+        android:src="@drawable/button_historical"
+    />
+    <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Historical"
+          android:textColor="@color/blk"
+          android:gravity="center_horizontal"
+           />
+    </LinearLayout>
+      
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+ >
+    <ImageView android:id="@+id/button_tamples_monuments"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+      android:src="@drawable/button_temple"
+      />
+    <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Temples"
+          android:textColor="@color/blk"
+          android:gravity="center_horizontal"
+           />
+    </LinearLayout>
+    </TableRow>
+
+  <TableRow
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal" >
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:layout_marginTop="10dp"
+          android:orientation="vertical" >
+
+          <ImageView
+              android:id="@+id/button_picnic_monuments"
+               android:layout_width="60dp"
+        android:layout_height="60dp"
+              android:layout_gravity="center_horizontal"
+              android:src="@drawable/button_picnic" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:gravity="center_horizontal"
+              android:text="@string/Picnic_Place"
+              android:textColor="@color/blk" />
+      </LinearLayout>
+  </TableRow>
+
+        <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        android:gravity="center_horizontal">
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+  
+    <ImageView android:id="@+id/button_mallls_monuments"
+         android:layout_width="60dp"
+        android:layout_height="60dp"
+      android:layout_gravity="center_horizontal"
+       android:src="@drawable/button_mall"
+       />
+     <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Shoping_Malls"
+          android:gravity="center_horizontal"
+          android:textColor="@color/blk"
+          
+           />
+     </LinearLayout>
+
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+         <ImageView
+             android:id="@+id/button_cineplex_monuments"
+              android:layout_width="60dp"
+        android:layout_height="60dp"
+             android:layout_gravity="center_horizontal"
+             android:src="@drawable/button_cimema" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:text="@string/Cinema_Hall"
+             android:textColor="@color/blk" 
+             android:gravity="center_vertical"/>
+     </LinearLayout>
+</TableRow>
+   </TableLayout>
+</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/list_background"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/layout_image_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/wht"
+        android:padding="2dp" 
+        android:layout_alignParentLeft="true">
+
+         <ImageView android:id="@+id/image_listcontent"
+            android:layout_width="37px"
+            android:layout_height="37px"
+            android:background="@color/darkgray"
+            android:src="@drawable/ic_launcher"
+             />
+</LinearLayout>
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="3dp"
+             android:orientation="vertical"
+             android:id="@+id/layout_text_main" 
+             android:layout_toRightOf="@id/layout_image_main"
+             >
+
+             <TextView
+                 android:id="@+id/text_heading_listcontent"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentTop="true"
+                 
+                 android:textStyle="bold"
+                 android:textColor="@color/blk"/>
+            
+<ImageView android:id="@+id/image_distance_listcontent"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/text_heading_listcontent"
+             />
+             <TextView
+                 android:id="@+id/text_subhead_listcontente"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentBottom="true"
+                 android:layout_below="@id/text_heading_listcontent"
+                 android:layout_toRightOf="@id/image_distance_listcontent"
+                 android:layout_marginLeft="5dp"
+                 android:textColor="@color/blk"
+              />
+               
+             
+         </RelativeLayout>
+<ImageView android:id="@+id/image_next_listcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/next"
+       
+             />
+</RelativeLayout>

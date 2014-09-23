@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blk" >
+
+       <ImageView
+           android:id="@+id/div"
+    
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+           android:src="@drawable/ic_launcher"/>
+
+          <TextView
+              android:id="@+id/dtv1"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:text="@string/app_name"
+              android:textColor="@color/theme"
+              android:textSize="20dp" />
+          <View android:layout_width="fill_parent"
+              android:layout_height="2dp"
+              android:layout_below="@id/div"
+              android:background="@color/theme"
+              android:id="@+id/devider1"
+              
+/>
+
+<AutoCompleteTextView
+             android:id="@+id/auto_complete_header"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+              android:layout_below="@id/devider1"
+              android:layout_centerHorizontal="true"
+            android:background="@drawable/design_search_box"
+            android:hint="@string/search_jaipur"
+            android:paddingLeft="5dp"
+            android:layout_marginTop="5dp"
+             android:ems="10"
+            android:textColor="@color/blk" />
+ <View android:layout_width="fill_parent"
+              android:layout_height="0dp"
+              android:layout_below="@id/auto_complete_header"
+              android:background="@color/theme"
+              android:id="@+id/devider2"
+              android:layout_marginTop="5dp"/>
+          <Button
+              android:id="@+id/search"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+             android:layout_toLeftOf="@+id/cancle"
+              android:layout_below="@id/devider2"
+              android:background="@drawable/monument_button"  
+              android:onClick="clickButton"
+              android:layout_margin="10dp"
+              android:text="Search" />
+
+          <Button
+              android:id="@+id/cancle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+              android:layout_below="@id/devider2" 
+              android:background="@drawable/monument_button"   
+              android:onClick="clickButton"
+              
+              android:layout_margin="10dp"
+              android:text="Cancle" />
+           <View
+        android:id="@+id/devider3"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/cancle"
+        android:layout_marginTop="5dp"
+        android:background="@color/theme" />
+    
+       </RelativeLayout>
+   
+    
+
+

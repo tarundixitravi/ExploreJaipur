@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    
+    android:background="@drawable/gray">
+
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/header" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+</LinearLayout>
+
+<LinearLayout 
+       
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+            android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:gravity="center"
+         >
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            
+            android:shrinkColumns="*"
+            android:stretchColumns="*" >
+
+  <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"> 
+  
+  
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_gravity="center_horizontal" >
+
+          <ImageView
+              android:id="@+id/button_home_page_monument"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+            android:src="@drawable/butten_visit"
+              android:gravity="center_horizontal"
+              android:clickable="true" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp"
+              android:text="@string/Monuments"
+              android:textColor="@color/blk"
+              android:textSize="35sp"
+              android:gravity="center_horizontal"/>
+      </LinearLayout>
+           <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_gravity="center_horizontal" >
+
+         <ImageView
+             android:id="@+id/button_home_page_map"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center_horizontal"
+             android:src="@drawable/button_map"
+             android:clickable="true" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5dp"
+             android:text="@string/Jaipur_Map"
+             android:textColor="@color/blk"
+             android:textSize="35sp" />
+
+     </LinearLayout>
+
+      </TableRow>
+     
+  <TableRow 
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content" 
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp"> 
+ 
+      <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+     android:layout_gravity="center_horizontal">
+              <ImageView
+            android:id="@+id/button_home_page_utility"
+            android:layout_width="match_parent"
+             android:gravity="center_horizontal" 
+            android:layout_height="wrap_content"
+             android:src="@drawable/button_utility"
+            android:clickable="true"
+           />
+              
+      <TextView
+ 
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/City_Utilities"
+          android:textColor="@color/blk"
+          android:textSize="35sp"
+          android:gravity="center_horizontal" 
+          />
+      </LinearLayout>
+
+     <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+         <ImageView
+             android:id="@+id/button_home_page_bus"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            android:src="@drawable/button_bus"
+             android:clickable="true"
+             android:gravity="center_horizontal" />
+
+           <TextView
+          
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="5dp"
+          android:text="@string/Jaipur_Bus"
+          android:textColor="@color/blk"
+          android:textSize="35sp"
+          
+           />
+      </LinearLayout>
+
+      
+  </TableRow>
+  </TableLayout>
+</LinearLayout>
+
+</RelativeLayout>

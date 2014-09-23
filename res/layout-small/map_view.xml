@@ -1,0 +1,89 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  
+    android:background="@drawable/gray">
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+</LinearLayout>
+<RadioGroup
+        android:id="@+id/radiogroup_onmap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     android:layout_below="@id/header"
+        android:orientation="horizontal"
+     
+    >
+        <RadioButton
+            android:id="@+id/button_detail_description_onmap"
+            style="@style/navbar_button"
+          
+            android:text="@string/Details"
+        />
+        <RadioButton
+            android:id="@+id/button_map_description_onmap"
+            style="@style/navbar_button"
+              
+            android:text="@string/Locate_on_Map"
+          
+        />
+        <RadioButton
+            android:id="@+id/button_here_description_onmap"
+            style="@style/navbar_button"
+
+            android:text="@string/Path_from_Here"
+            
+        />
+         <RadioButton
+            android:id="@+id/button_jp_description_onmap"
+            style="@style/navbar_button"
+          
+            android:text="@string/Path_from_JP_Junction"
+            
+        />
+       
+
+    </RadioGroup>
+<fragment
+    android:id="@+id/map"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/footer"
+    android:layout_below="@id/radiogroup_onmap"
+    class="com.google.android.gms.maps.SupportMapFragment" />
+
+</RelativeLayout>
+
+ 

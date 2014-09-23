@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gray">
+
+<LinearLayout android:id="@+id/main_header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/header_innner" />
+
+</LinearLayout>
+<LinearLayout android:id="@+id/header"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_below="@id/main_header">
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            layout="@layout/sub_header" />
+
+</LinearLayout>
+
+
+
+<LinearLayout android:id="@+id/footer"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"         
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true">
+        <include layout="@layout/footer" />
+</LinearLayout>
+<RelativeLayout
+     android:id="@+id/main_layout"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_above="@+id/footer"
+     android:layout_below="@+id/header"
+
+    >
+<TextView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/Select_bus_stops"
+  
+    android:textSize="20sp"
+    android:textColor="@color/blk"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/find_heading"/>
+
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_background_2"
+    android:id="@+id/layout_from_find_rout"
+     android:layout_below="@id/find_heading"
+
+     android:layout_margin="5dp"
+     android:padding="5dp">
+        <TextView android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/From"
+            android:textColor="@color/blk"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/text_from_route"/>
+             <Spinner
+            android:id="@+id/spinner_from_find_route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:prompt="@string/select"
+            android:layout_toRightOf="@id/text_from_route"
+            android:layout_centerVertical="true"
+            />
+</RelativeLayout>
+
+
+
+<Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/monument_button"
+         android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_margin="5dp"
+            android:text="@string/Find"
+            android:textColor="@color/blk"
+            android:id="@+id/button_find_find_route"
+            android:layout_below="@id/layout_from_find_rout"
+            android:layout_centerHorizontal="true"/>
+ 
+<ListView 
+           
+            android:layout_below="@id/button_find_find_route"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/list_result_find_route"
+            android:divider="@drawable/button_background"
+            android:dividerHeight="2dp"
+            
+            >
+            </ListView>
+            </RelativeLayout>
+           
+</RelativeLayout>

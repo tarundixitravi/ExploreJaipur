@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_background"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/layout_image_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@color/wht"
+        android:padding="2dp" >
+
+        <ImageView
+            android:id="@+id/image_listcontent"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@color/darkgray"
+            android:src="@drawable/ic_launcher" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/layout_image_main"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_heading_listcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/blk"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image_distance_listcontent"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/text_heading_listcontent" />
+
+        <TextView
+            android:id="@+id/text_subhead_listcontente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/text_heading_listcontent"
+            android:layout_toRightOf="@id/image_distance_listcontent"
+            android:textColor="@color/blk"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_next_listcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/next" />
+
+</RelativeLayout>

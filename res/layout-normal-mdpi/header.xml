@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/header_background">
+
+    
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_centerInParent="true"
+        android:text="@string/Home_Page"
+        android:textColor="@color/wht"
+        android:paddingLeft="5dp"
+        android:layout_margin="5dp"
+        android:id="@+id/text_heading_header"
+        />
+<AutoCompleteTextView
+        android:id="@+id/auto_complete_header"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+ android:textSize="17sp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/search_button"
+    android:background="@android:color/black"
+        android:hint="@string/search_jaipur"
+        android:paddingLeft="5dp"
+        android:textColor="@color/wht"
+       />
+        
+        <ImageView
+             android:id="@+id/search_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+         android:layout_centerVertical="true"
+         
+         android:layout_alignParentRight="true"
+             android:src="@drawable/search"
+             android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
+
+
+    
+
+</RelativeLayout>
